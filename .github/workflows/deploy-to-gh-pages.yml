@@ -16,6 +16,10 @@ jobs:
         run: |
           npm install
           npm run build
+        env:
+          REACT_APP_PLOTLY_USERNAME: ${{ secrets.REACT_APP_PLOTLY_USERNAME }}
+          REACT_APP_PLOTLY_API_KEY: ${{ secrets.REACT_APP_PLOTLY_API_KEY }}
+          REACT_APP_ATI_KEY: ${{ secrets.REACT_APP_ATI_KEY }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
