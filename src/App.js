@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 const plotly = require('plotly')(process.env.REACT_APP_PLOTLY_USERNAME, process.env.REACT_APP_PLOTLY_API_KEY)
 
-console.log("process.env==", process.env)
 class App extends Component {
 
   async componentDidMount() {
