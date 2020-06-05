@@ -7,10 +7,9 @@ class App extends Component {
   async componentDidMount() {
     try {
       const noResultsUrl = `https://apirest.atinternet-solutions.com/data/v2/json/getData?&columns={d_pub_variant,m_pub_impressions}&sort={-m_pub_impressions}&filter={m_pub_impressions:{$gt:%270%27},d_pub_creative:{$eq:%27No%20results%27},d_pub_campaign:{$eq:%27se-searchbox-message%27}}&space={s:598273}&period={R:{M:%270%27}}&max-results=10&apikey=${process.env.REACT_APP_ATI_KEY}`
-      console.log("noResultsUrl===", noResultsUrl)
+
       const res = await fetch(noResultsUrl)
       const json = await res.json();
-      console.log('json=', json)
 
       const { DataFeed: [{Rows}] } = json;
 
