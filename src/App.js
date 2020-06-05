@@ -18,7 +18,19 @@ class App extends Component {
       const yData = Rows.map((row) => row.m_pub_impressions)
 
       const coordinateData = [{x: xData, y: yData, type: 'bar'}];
-      const layout = {fileopt: "overwrite", filename: "simple-node-example"};
+      const layout = {
+        fileopt: "overwrite",
+        filename: "simple-node-example",
+        layout: {
+          xaxis: {
+            title: "Queries",
+
+          },
+          yaxis: {
+            title: "Publisher Impressions"
+          }
+        }
+      };
 
       plotly.plot(coordinateData, layout, function (err, msg) {
         if (err) return console.log(err);
