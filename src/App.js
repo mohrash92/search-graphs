@@ -48,6 +48,7 @@ class App extends Component {
     return (
         <div>
           <iframe
+              title="No results"
               id="igraph"
               scrolling="no"
               src="https://chart-studio.plotly.com/~mo_at_bbc/0/#/"
