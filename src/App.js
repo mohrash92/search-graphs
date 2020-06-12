@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-const plotly = require('plotly')(process.env.REACT_APP_PLOTLY_USERNAME, process.env.REACT_APP_PLOTLY_API_KEY)
+const plotly = require('plotly')('mo_at_bbc', process.env.REACT_APP_PLOTLY_API_KEY)
 
 class App extends Component {
 
