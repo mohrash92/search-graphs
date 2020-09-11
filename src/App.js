@@ -43,7 +43,7 @@ const getLayout = (xAxisTitle, yAxisTitle) => {
 }
 
 const createGraph = (coordinateData, layout) => {
-  console.log("coordinateData", coordinateData);s
+  console.log("coordinateData", coordinateData);
   plotly.plot(coordinateData, layout, function (err, msg) {
     if (err) return console.log(err);
     console.log(msg);
